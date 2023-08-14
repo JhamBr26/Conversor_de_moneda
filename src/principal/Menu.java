@@ -25,6 +25,9 @@ public class Menu {
 				case "Conversor de Moneda": new ConversorMoneda();
 											continuarPrograma();
 				break;
+				case "Conversor de Temperatura": new ConversorTemperatura();
+												continuarPrograma();
+				break;
 				default: programaTerminado(); 	
 				break;
 			}
