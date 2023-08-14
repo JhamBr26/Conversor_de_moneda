@@ -9,6 +9,7 @@ public class App {
 	void testi() {
 		JOptionPane.showInputDialog(null, getClass(), null, 0, null, null, getClass());
 	}
+	
 	public static void main(String[] args) {
 		new Menu();
 		

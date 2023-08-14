@@ -1,5 +1,7 @@
 package principal;
 
+import java.math.BigDecimal;
+
 public class ConversorTemperatura extends Conversor {	 
 	private String[] listaValores  = { "De Celsius a Kelvin", "De Celsius a Fahrenheit", 
 			"De Kelvin a Celsius", "De Kelvin a Fahrenheit", 
@@ -20,24 +22,27 @@ public class ConversorTemperatura extends Conversor {
 	public void opciones(){
 		
 		switch(super.getOpcionElegida()){
-			case "De Celsius a Kelvin":  System.out.print("FUNCIONO 1");
+			case "De Celsius a Kelvin":  CelsiusKelvin();
 			break;
-			case "De Celsius a Fahrenheit":  System.out.print("FUNCIONO 2");
+			case "De Celsius a Fahrenheit":  CelsiusFahrenheit();
 			break;
-			case "De Kelvin a Celsius":  System.out.print("FUNCIONO 3");
-			break;
-			case "De Kelvin a Fahrenheit":  System.out.print("FUNCIONO 4");
-			break;
-			case "De Fahrenheit a Celsius": System.out.print("FUNCIONO 5") ;
-			break;
-			case "De Fahrenheit a Kelvin":  System.out.print("FUNCIONO 6");
-			break; 
 			default:; 
 			break;
 		}
 		super.mostrarResultado();
 	}
 	
- 
+	public void CelsiusKelvin() { 
+		BigDecimal constante = new BigDecimal("273.15");
+		super.setTipoCantidad("Kelvin"); 
+		super.setCantidad(super.getCantidad().add(constante));
+	}
+	
+	public void CelsiusFahrenheit() {  
+		BigDecimal constante1 = new BigDecimal("1.8");
+		BigDecimal constante2 = new BigDecimal("32");
+		super.setTipoCantidad("Kelvin"); 		
+		super.setCantidad(super.getCantidad().multiply(constante1).add(constante2));
+	} 
 
 }

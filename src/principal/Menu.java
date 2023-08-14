@@ -9,7 +9,7 @@ public class Menu {
 	private String message= "Seleccione una opción de conversión";
 	private String title = "Menu";
 	private int image= -1;
-	private String[] selectionValues = { "Conversor de Moneda","Conversor de Temperatura","Conversor de Longitud","Conversor de velocidad"};
+	private String[] selectionValues = { "Conversor de Moneda","Conversor de Temperatura"};
 	private String initialSelectionValue = selectionValues[0];
 	
 	public Menu(){
@@ -46,10 +46,6 @@ public class Menu {
 		switch(resultado) {
 			case 0: new Menu();
 			break;
-			/*case 1: programaTerminado();
-			break;
-			case 2: programaTerminado();
-			break;*/
 			default: programaTerminado();
 			break;		
 		}				
