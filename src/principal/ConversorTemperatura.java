@@ -11,6 +11,7 @@ public class ConversorTemperatura extends Conversor {
 		ejecutarConversorTemperatura();
 	}
 	
+	//se asignan todos los valores correspondientes al conversor de temperatura
 	public void ejecutarConversorTemperatura() {
 		super.setTitle("Temperatura"); 
 		super.setListaValores(this.listaValores);
@@ -19,8 +20,9 @@ public class ConversorTemperatura extends Conversor {
 		super.cantidadConvertir();
 	}
   
-	public void opciones(){
-		
+	
+	//se detallan las opciones de conversion posible
+	public void opciones(){		
 		switch(super.getOpcionElegida()){
 			case "De Celsius a Kelvin":  CelsiusKelvin();
 			break;
@@ -32,12 +34,14 @@ public class ConversorTemperatura extends Conversor {
 		super.mostrarResultado();
 	}
 	
+	//Calcula el la conversion de Celsius a Kelvin
 	public void CelsiusKelvin() { 
 		BigDecimal constante = new BigDecimal("273.15");
 		super.setTipoCantidad("Kelvin"); 
 		super.setCantidad(super.getCantidad().add(constante));
 	}
 	
+	//Calcula el la conversion de Celsius a Fahrenheit
 	public void CelsiusFahrenheit() {  
 		BigDecimal constante1 = new BigDecimal("1.8");
 		BigDecimal constante2 = new BigDecimal("32");

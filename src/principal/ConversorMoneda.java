@@ -12,7 +12,7 @@ public class ConversorMoneda extends Conversor {
 		ejecutarConversorMoneda();	
 	}
 	
-	
+	//se asignan todos los valores correspondientes al conversor de monedas
 	public void ejecutarConversorMoneda() {
 		super.setTitle("Monedas"); 
 		super.setListaValores(this.listaValores);
@@ -21,6 +21,7 @@ public class ConversorMoneda extends Conversor {
 		super.cantidadConvertir();
 	}
 	
+	//se detallan las opciones de conversion posible
 	public void opciones(){
 		switch(super.getOpcionElegida()){
 			case "De Pesos a Dólar": calcularCambio("17.00","Dolares");
@@ -45,6 +46,7 @@ public class ConversorMoneda extends Conversor {
 		super.mostrarResultado();
 	}
 	
+	//Metodo que calcula el cambio 
 	public void calcularCambio(String valorCambio, String tipoMoneda ) {
 		BigDecimal cambio = new BigDecimal(valorCambio);
 		super.setTipoCantidad(tipoMoneda);

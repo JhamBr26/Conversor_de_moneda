@@ -104,9 +104,8 @@ public abstract class Conversor {
 		this.messageOpcion = messageOpcion;
 	}
 
-
-	public void cantidadConvertir() { 
-		//String message = "Ingrese la cantidad de grados que desea convertir";
+	//Metodo que guarda el valor a convertir
+	public void cantidadConvertir() {  
 		try {			
 			String valor = String.valueOf(JOptionPane.showInputDialog(this.messageCantidad)) ;
 			this.cantidad = new BigDecimal(valor);
@@ -117,9 +116,8 @@ public abstract class Conversor {
 		}		 
 	}
 	
-	
-	public void seleccionarOpcion() {  		
-		//String message = "Elija la Escala a la que deseas convertir la temperatura"; 
+	//Metodo que despliega las opciones de conversion
+	public void seleccionarOpcion() {  		 
 		int image = -1;				
 		try {
 			this.opcionElegida = (String) JOptionPane.showInputDialog(getParentComponent() , this.messageOpcion , 
@@ -129,17 +127,18 @@ public abstract class Conversor {
 			//exception.printStackTrace();
 		}			
 	}
- 
+	
+	//metodo abstracto en el cual se presentan las distintas opciones
 	public abstract void opciones();
 	 
-	
+	//Metodo para mostrar el resultado de la conversion
 	public void mostrarResultado( ) {		 		
 		String message = "Equivale a "+ getCantidad() + " "+ getTipoCantidad(); 
 		int image = 1;		
 		JOptionPane.showMessageDialog(getParentComponent() , message , this.title , image );		
 	}
 	
-	
+	//Muestra si el mensaje no es valido para cuando se ingrese un valor no adecuado
 	public void valorNoValido() {		 	
 		String message = "Valor no valido";		
 		JOptionPane.showMessageDialog(getParentComponent() , message);
