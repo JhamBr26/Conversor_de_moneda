@@ -1,2 +1,2 @@
 <h1 align="center"> Conversor de Moneda y Temperatura </h1>
-Proyecto enfocado en la conversion, en este caso, de monedas y temperaturas. Es así que uno escoge el tipo de conversion. Posteriormente se ingresa la cantidad a conversir y se escoge la lista de opciones a convertir. Despues se mostrará el resultado de la conversión y finalmente se preguntará si se desea continuar con el programa o terminarlo.
+Proyecto enfocado en la conversion, en este caso, de monedas y temperaturas. Es así que uno escoge el tipo de conversion. Posteriormente se ingresa la cantidad a convertir y se selecciona la lista de opciones a convertir. Despues se mostrará el resultado de la conversión y finalmente se preguntará si se desea continuar con el programa o terminarlo.
